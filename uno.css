@@ -1,0 +1,50 @@
+:root{
+    --fancy-gradient: linear-gradient(to bottom, #884ced, #ec1cce);
+}
+
+body{
+    background: #223;
+    margin:0;
+}
+
+header{
+    height: 200px;
+    background: var(--fancy-gradient);
+    display: flex;
+    justify-content: center;
+    
+}
+header:hover img{
+    transform: rotate(-5deg) translateY(230px);
+    transition: transform 1s ease;
+}
+header:hover .text{
+    transform:translate(-100px, -50px) scale(1.5);
+}
+
+.title{
+    width: 600px;
+    height: 100%;
+  
+    overflow: hidden; /*Lo que salga de este contenedor se oculta*/
+    display:flex;
+    align-items: flex-end;
+}
+img {
+    /*display: inline-block;*/
+    transform: rotate(-5deg) translateY(10px); /*Bajar la imagen y girarla*/
+    filter:drop-shadow(5px 5px 5px #0008); /*Sombra al logo sin el bloque de la foto*/
+    z-index: 1;
+    transition: transform 1s ease;
+}
+.text{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 800;
+    font-size: 4rem;
+    color:#fff;
+    text-shadow: 5px 5px 5px #0008;
+    line-height: 80%; /*Baja el texto dentro del div porque la fuente tiene ese interlineado*/
+    transform:translate(-45px);
+    transition: transform 1s ease;
+}
+    
